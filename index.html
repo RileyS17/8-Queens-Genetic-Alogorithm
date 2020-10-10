@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Genetic Algorithm</title>
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/chessboard-1.0.0.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/chessboard-1.0.0.js"></script>
+  </head>
+  <body>
+        <h1 class="center blue-text">8-Queen Problem w/ Genetic Alogirthm</h1>
+        <div class='container'>
+          <div id="myBoard" style="margin:auto; width: 400px;"></div>
+          <div>
+            <label>Solutions</label>
+            <select class="browser-default" id='list-sol'>
+              <option value="" disabled selected>None</option>
+            </select>
+          </div>
+          <p class="center" id='best-fit'>Best Fit Function: 0.000</p>
+          <p class="center inline" id='gen'>Generation: 0</p>
+          <p class="center inline" id='sol'>Number of Unique Solutions: 0</p>
+          <form class='center' id='form-gen'>
+            <div class='row'>
+              <div class="col s12">
+                # of Chromosomes:
+                <div class="input-field inline">
+                  <input id="input-chromo" type="text" value="150">
+                </div>
+                Mutation:
+                <div class="input-field inline">
+                  <input id="input-mut" type="text" value="0.8">
+                </div>
+                Generation Cut-off:
+                <div class="input-field inline">
+                  <input id="input-cut" type="text" value="5000">
+                </div>
+              </div>
+              <div class="row">
+                <input type='submit' value='Generate'/>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <script src='js/ChessGraph.js'></script>
+        <script src="js/Chromosome.js"></script>
+        <script src="js/ChessGenetic.js"></script>
+        <script src='js/app.js'></script>
+  </body>
+</html>
